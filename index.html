@@ -534,7 +534,7 @@
                 />
               </label>
               <label>
-                <span>Market</span>
+                <span>Former Otovo office</span>
                 <select required name="market">
                   <option value="" selected disabled>Pick one</option>
                   <option value="Norway">Norway</option>
@@ -544,37 +544,41 @@
                   </option>
                 </select>
               </label>
-              <label>
+              <div class="span-2">
                 <span>Attendance</span>
-                <select required name="attendance">
-                  <option value="" selected disabled>Pick one</option>
-                  <option value="Yes, I am in">Yes, I am in!</option>
-                  <option value="Maybe, still sorting logistics">
+                <div
+                  class="rsvp-radio-group"
+                  style="display: grid; gap: 0.6rem; margin-top: 0.4rem;"
+                >
+                  <label style="display: flex; align-items: center; gap: 0.6rem;">
+                    <input
+                      required
+                      type="radio"
+                      name="attendance"
+                      value="Yes, I am in!"
+                    />
+                    Yes, I am in!
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.6rem;">
+                    <input
+                      type="radio"
+                      name="attendance"
+                      value="Maybe, still sorting logistics"
+                    />
                     Maybe, still sorting logistics
-                  </option>
-                  <option value="Sorry, cannot make it">
+                  </label>
+                  <label style="display: flex; align-items: center; gap: 0.6rem;">
+                    <input
+                      type="radio"
+                      name="attendance"
+                      value="Sorry, cannot make it"
+                    />
                     Sorry, cannot make it
-                  </option>
-                </select>
-              </label>
-              <label>
-                <span>Plus-ones</span>
-                <input
-                  min="0"
-                  max="3"
-                  type="number"
-                  name="plusOnes"
-                  value="0"
-                />
-              </label>
-              <label class="span-2">
-                <span>Dietary notes</span>
-                <input
-                  type="text"
-                  name="dietary"
-                  placeholder="Vegetarian, allergies, etc."
-                />
-              </label>
+                  </label>
+                </div>
+              </div>
+
+
               <label class="span-2">
                 <span>Extra message (optional)</span>
                 <textarea
@@ -585,14 +589,14 @@
               </label>
               <div class="span-2">
                 <button class="button button-primary button-lg" type="submit">
-                  Open RSVP email
+                  Submit RSVP
                 </button>
               </div>
             </form>
 
             <p id="rsvp-success" class="rsvp-success" hidden>
-              Thanks! If your email app didn't open, drop the same info in
-              WhatsApp and we'll register you manually.
+              Thanks! You're on the list. If this didn't work, drop the same info
+              in WhatsApp and we'll register you manually.
             </p>
           </div>
 
@@ -620,8 +624,7 @@
               <div>
                 <dt>Can I bring a plus-one?</dt>
                 <dd>
-                  Please RSVP yourself first, then ask in WhatsApp so we can
-                  balance headcount.
+                 Any friend of Otovo is welcome. Write in the optional extra message, so we can balance headcount.
                 </dd>
               </div>
               <div>
