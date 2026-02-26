@@ -1,4 +1,4 @@
-const RSVP_EMAIL = "alumni-rsvp@otovo.com";
+const RSVP_EMAIL = "rix1@otovo.com";
 
 function setupRevealAnimations() {
   const elements = document.querySelectorAll(".reveal");
@@ -71,8 +71,7 @@ function setupRsvpForm() {
       ].join("\n"),
     );
 
-    window.location.href =
-      `mailto:${RSVP_EMAIL}?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${RSVP_EMAIL}?subject=${subject}&body=${body}`;
     if (success) success.hidden = false;
   });
 }
